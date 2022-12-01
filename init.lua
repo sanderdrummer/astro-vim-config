@@ -77,19 +77,7 @@ local config = {
         -- end,
 
         -- Set dashboard header
-        header = {
-                " █████  ███████ ████████ ██████   ██████",
-                "██   ██ ██         ██    ██   ██ ██    ██",
-                "███████ ███████    ██    ██████  ██    ██",
-                "██   ██      ██    ██    ██   ██ ██    ██",
-                "██   ██ ███████    ██    ██   ██  ██████",
-                " ",
-                "    ███    ██ ██    ██ ██ ███    ███",
-                "    ████   ██ ██    ██ ██ ████  ████",
-                "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-                "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-                "    ██   ████   ████   ██ ██      ██",
-        },
+        header = {},
 
         -- Default theme configuration
         default_theme = {
@@ -248,6 +236,7 @@ local config = {
                                 end,
                         },
                         ["psliwka/vim-smoothie"] = {},
+                        ["editorconfig/editorconfig-vim"] = {},
                         --
                         -- You can disable default plugins as follows:
                         -- ["goolord/alpha-nvim"] = { disable = true },
