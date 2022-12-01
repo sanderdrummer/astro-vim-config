@@ -209,15 +209,11 @@ local config = {
                         ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
                         -- harpoon
                         ["<leader>q"] = {
-                                function()
-                                        require("harpoon.mark").add_file()
-                                end,
+                                function() require("harpoon.mark").add_file() end,
                         },
                         ["<C-e>"] = {
-                                function()
-                                        require("harpoon.ui").toggle_quick_menu()
-                                end,
-                        }
+                                function() require("harpoon.ui").toggle_quick_menu() end,
+                        },
                 },
                 t = {
                         -- setting a mapping to false will disable it
@@ -230,16 +226,17 @@ local config = {
                 init = {
                         ["ThePrimeagen/harpoon"] = {
                                 config = function()
-                                        require("harpoon").setup({
+                                        require("harpoon").setup {
                                                 save_on_toggle = false, -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
                                                 save_on_change = true, -- saves the harpoon file upon every change. disabling is unrecommended.
                                                 enter_on_sendcmd = false, -- sets harpoon to run the command immediately as it's passed to the terminal when calling `sendCommand`.
                                                 tmux_autoclose_windows = false, -- closes any tmux windows harpoon that harpoon creates when you close Neovim.
                                                 excluded_filetypes = { "harpoon" }, -- filetypes that you want to prevent from adding to the harpoon list menu.
                                                 mark_branch = false, -- set marks specific to each git branch inside git repository
-                                        })
-                                end
-                        }
+                                        }
+                                end,
+                        },
+                        ["psliwka/vim-smoothie"] = {},
                         --
                         -- You can disable default plugins as follows:
                         -- ["goolord/alpha-nvim"] = { disable = true },
@@ -262,7 +259,6 @@ local config = {
                         --     require("lsp_signature").setup()
                         --   end,
                         -- },
-
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
