@@ -4,6 +4,13 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
+--
+--
+--
+--
+--
+--
+
 local config = {
 
         -- Configure AstroNvim updates
@@ -214,6 +221,10 @@ local config = {
                         ["<C-e>"] = {
                                 function() require("harpoon.ui").toggle_quick_menu() end,
                         },
+                        -- best remap
+                        ["<leader>p"] = { '"_dP' },
+                        -- open terminal
+                        ["<leader>t"] = { "<cmd>!kitty &<cr>" },
                 },
                 t = {
                         -- setting a mapping to false will disable it
