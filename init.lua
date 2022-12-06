@@ -149,7 +149,7 @@ local config = {
                         disabled = { -- disable formatting capabilities for the listed language servers
                                 -- "sumneko_lua",
                         },
-                        timeout_ms = 3000, -- default format timeout
+                        timeout_ms = 2000, -- default format timeout
                         -- filter = function(client) -- fully override the default formatting function
                         --   return true
                         -- end
@@ -209,6 +209,15 @@ local config = {
                         ["<C-e>"] = {
                                 function() require("harpoon.ui").toggle_quick_menu() end,
                         },
+                        ["<leader>,"] = {
+                                function() require("spectre").open() end,
+                        },
+                        ["<leader>,w"] = {
+                                function() require("spectre").open_visual { select_word = true } end,
+                        },
+                        ["<leader>,f"] = {
+                                function() require("spectre").open_file_search() end,
+                        },
                         -- best remap
                         ["<leader>p"] = { '"_dP' },
                         -- open terminal
@@ -237,6 +246,8 @@ local config = {
                         },
                         ["psliwka/vim-smoothie"] = {},
                         ["editorconfig/editorconfig-vim"] = {},
+                        ["windwp/nvim-spectre"] = {},
+
                         --
                         -- You can disable default plugins as follows:
                         -- ["goolord/alpha-nvim"] = { disable = true },
