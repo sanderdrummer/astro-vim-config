@@ -10,6 +10,7 @@
 --
 --
 --
+--
 
 local config = {
 
@@ -51,7 +52,7 @@ local config = {
                         -- set to true or false etc.
                         relativenumber = true, -- sets vim.opt.relativenumber
                         number = true, -- sets vim.opt.number
-                        spell = false, -- sets vim.opt.spell
+                        spell = true, -- sets vim.opt.spell
                         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                         wrap = false, -- sets vim.opt.wrap
                 },
@@ -224,6 +225,8 @@ local config = {
                         ["<leader>t"] = { "<cmd>!kitty &<cr>" },
                         ["<leader>d"] = { "<C-o>" },
                         ["<leader>dd"] = { "<C-i>" },
+                        ["<PageUp>"] = { "<C-u>" },
+                        ["<PageDown>"] = { "<C-d>" },
                 },
                 t = {
                         -- setting a mapping to false will disable it
