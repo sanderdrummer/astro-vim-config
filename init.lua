@@ -257,6 +257,13 @@ local config = {
                         },
                         ["edluffy/hologram.nvim"] = {},
                         ["MunifTanjim/nui.nvim"] = {},
+                        ["AckslD/nvim-neoclip.lua"] = {
+                                requires = {
+                                        { "kkharji/sqlite.lua", module = "sqlite" },
+                                        { "nvim-telescope/telescope.nvim" },
+                                },
+                                config = function() require("neoclip").setup() end,
+                        },
                         --
                         -- You can disable default plugins as follows:
                         -- ["goolord/alpha-nvim"] = { disable = true },
