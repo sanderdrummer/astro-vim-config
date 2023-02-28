@@ -220,7 +220,7 @@ local config = {
                                 function() require("spectre").open_file_search() end,
                         },
                         -- best remap
-                        ["<leader>p"] = { '"_dP' },
+                        ["<leader>p"] = { ":lua require('neoclip.fzf')() <cr>" },
                         -- open terminal
                         ["<leader>t"] = { "<cmd>!kitty &<cr>" },
                         ["<leader>d"] = { "<C-o>" },
@@ -257,10 +257,10 @@ local config = {
                         },
                         ["edluffy/hologram.nvim"] = {},
                         ["MunifTanjim/nui.nvim"] = {},
+                        ["ibhagwan/fzf-lua"] = {},
                         ["AckslD/nvim-neoclip.lua"] = {
                                 requires = {
-                                        { "kkharji/sqlite.lua", module = "sqlite" },
-                                        { "nvim-telescope/telescope.nvim" },
+                                        { "ibhagwan/fzf-lua" },
                                 },
                                 config = function() require("neoclip").setup() end,
                         },
