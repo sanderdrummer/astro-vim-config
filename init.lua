@@ -1,6 +1,5 @@
 --              AstroNvim Configuration Table
 -- All configuration changes should go inside of the table below
-
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
@@ -220,7 +219,7 @@ local config = {
                                 function() require("spectre").open_file_search() end,
                         },
                         -- best remap
-                        ["<leader>p"] = { ":lua require('neoclip.fzf')() <cr>" },
+                        ["<leader>p"] = { ":lua require('telescope').extensions.neoclip.default() <cr>" },
                         -- open terminal
                         ["<leader>t"] = { "<cmd>!kitty &<cr>" },
                         ["<leader>d"] = { "<C-o>" },
@@ -257,7 +256,6 @@ local config = {
                         },
                         ["edluffy/hologram.nvim"] = {},
                         ["MunifTanjim/nui.nvim"] = {},
-                        ["ibhagwan/fzf-lua"] = {},
                         ["AckslD/nvim-neoclip.lua"] = {
                                 requires = {
                                         { "ibhagwan/fzf-lua" },
