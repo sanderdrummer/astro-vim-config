@@ -252,6 +252,11 @@ local config = {
                         ["psliwka/vim-smoothie"] = {},
                         ["editorconfig/editorconfig-vim"] = {},
                         ["windwp/nvim-spectre"] = {},
+                        ["giusgad/pets.nvim"] = {
+                                config = function() require("pets").setup {} end,
+                        },
+                        ["edluffy/hologram.nvim"] = {},
+                        ["MunifTanjim/nui.nvim"] = {},
                         --
                         -- You can disable default plugins as follows:
                         -- ["goolord/alpha-nvim"] = { disable = true },
